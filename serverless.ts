@@ -9,6 +9,8 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: 'aws',
     runtime: 'nodejs16.x',
+    profile: 'serverlessUser',
+    region: 'ap-southeast-2',
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,

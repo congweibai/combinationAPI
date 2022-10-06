@@ -1,8 +1,16 @@
 import type { AWS } from '@serverless/typescript';
 
 const functions: AWS['functions'] = {
-  functionName: {
+  combinationAPI: {
     handler: 'src/functions/combinationAPI/index.handler',
+    events: [
+      {
+        httpApi: {
+          path: '/gameDeals',
+          method: 'get',
+        },
+      },
+    ],
   },
 };
 
