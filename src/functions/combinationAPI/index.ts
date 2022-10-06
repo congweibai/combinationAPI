@@ -47,7 +47,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
         steamRatingPercent,
         salePrice: salePrice * currencyConversion,
         normalPrice: normalPrice * currencyConversion,
-        savings: savings * currencyConversion,
+        savingsPercent: savings,
         releaseDate: new Date(releaseDate * 1000).toDateString(),
       };
     });
